@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0f">
+    <meta name="description" content="Estudio Jurídico C&amp;G: derecho de familia, sucesiones, reajustes, jubilaciones y pensiones.">
+    <title>Estudio Jurídico C&amp;G | Familia, Sucesiones y Previsional</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Imagenes/logo-blanco.png" alt="Logo del estudio" width="60">
+                <h2>Estudio Jurídico C&G</h2>
+            </div>
+            <nav>
+                <a href="#servicios">Servicios</a>
+                <a href="#nosotros">Estudio</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>Tu tranquilidad,<br> nuestro compromiso</h1>
+        <p>Asesoramiento legal en familia, sucesiones y derecho previsional</p>
+        <a class="btn" href="#contacto">Consultá ahora</a>
+    </section>
+
+    <section id="servicios" class="seccion">
+        <h2>Áreas de práctica</h2>
+        <div class="cards">
+            <a class="card" href="familia.html">
+                <h3>Derecho de Familia</h3>
+                <p>Divorcios, cuota alimentaria, régimen de comunicación, cuidado personal e inscripciones.</p>
+            
+                <span class="mas">Ver más &rarr;</span>
+            </a>
+            <a class="card" href="sucesiones.html">
+                <h3>Sucesiones</h3>
+                <p>Declaratoria de herederos, testamentos, partición de bienes y adjudicación de inmuebles.</p>
+            
+                <span class="mas">Ver más &rarr;</span>
+            </a>
+            <a class="card" href="reajustes.html">
+                <h3>Reajustes</h3>
+                <p>Reajuste de haberes previsionales y reclamos para que tu jubilación refleje lo que corresponde.</p>
+            
+                <span class="mas">Ver más &rarr;</span>
+            </a>
+            <a class="card" href="jubilaciones.html">
+                <h3>Jubilaciones</h3>
+                <p>Cómputo de aportes, moratorias, trámite ante ANSES y reconocimiento de servicios.</p>
+            
+                <span class="mas">Ver más &rarr;</span>
+            </a>
+            <a class="card" href="pensiones.html">
+                <h3>Pensiones</h3>
+                <p>Pensión por fallecimiento para cónyuges, convivientes e hijos, y gestión del beneficio.</p>
+            
+                <span class="mas">Ver más &rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="nosotros" class="seccion oscuro">
+        <h2>El estudio</h2>
+        <p class="texto">Somos un estudio jurídico que acompaña a cada persona con trato cercano, claridad en los pasos a seguir y seguimiento permanente de su caso. La primera consulta nos permite evaluar tu situación y explicarte las alternativas disponibles.</p>
+    </section>
+
+    <section id="contacto" class="seccion">
+        <h2>Contacto</h2>
+        <div class="contacto">
+            <div class="datos">
+                <h3>Datos del estudio</h3>
+                <p><b>Dirección:</b> <span id="dir-visible">Calle Uno, San Miguel, Buenos Aires</span></p>
+                <p><b>Teléfono / WhatsApp:</b> <span id="tel-visible"></span></p>
+                <p><b>E-mail:</b> estudiojuridicocaggianogenes@gmail.com</p>
+                <p><b>Horario:</b> Lunes a viernes, 9 a 17 hs</p>
+                <a class="btn" id="btn-wa" href="#" target="_blank" rel="noopener">Escribinos por WhatsApp</a>
+            </div>
+            <div class="qr">
+                <h3>Escaneá el QR</h3>
+                <div id="qrcode"></div>
+                <p>Abrí la cámara de tu celular y chateá con nosotros.</p>
+            </div>
+
+            <div class="mapa">
+                <h3>Cómo llegar</h3>
+                <div class="mapa-marco">
+                    <iframe id="mapa" title="Mapa con la ubicación del estudio" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+                <a class="btn" id="btn-mapa" href="#" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Estudio Jurídico C&amp;G. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="contacto.js"></script>
+</body>
+</html>

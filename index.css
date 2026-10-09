@@ -1,0 +1,126 @@
+/* ===== Paleta basada en el logo: negro, blanco y dorado ===== */
+:root {
+    --negro: #0d0d0f;
+    --carbon: #17181c;
+    --hueso: #f6f4ef;
+    --oro: #c9a45c;          /* sobre fondos oscuros */
+    --oro-oscuro: #8a6a2f;   /* sobre fondos claros */
+    --texto: #1b1c20;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    line-height: 1.5;
+    /* Fondo: hueso con una trama de puntitos dorados muy sutil */
+    background-color: var(--hueso);
+    background-image: radial-gradient(rgba(138, 106, 47, .13) 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+h1, h2 { font-family: 'Dancing Script', cursive; }
+img { max-width: 100%; }
+.container { max-width: 1400px; margin: auto; }
+
+/* ===== Encabezado (negro, como el fondo del logo) ===== */
+header { background-color: var(--negro); border-bottom: 3px solid var(--oro); }
+header .container { display: flex; flex-direction: column; align-items: center; padding: 10px 20px; gap: 4px; }
+.logo { display: flex; align-items: center; gap: 12px; }
+.logo img { height: 64px; width: auto; }
+.logo h2 { margin: 0; font-size: 1.3em; font-family: Arial, sans-serif; color: #fff; letter-spacing: .04em; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+nav a { color: #efe3c2; text-decoration: none; font-weight: 700; padding: 8px 14px; }
+nav a:hover { color: var(--oro); text-decoration: underline; }
+
+/* ===== Botones (mismo degradé animado del proyecto, en tonos del logo) ===== */
+.btn {
+    background: linear-gradient(-45deg, #0d0d0f, #3a3a40, #8a6a2f, #17181c);
+    background-size: 800% 400%;
+    padding: 1em 2em; display: inline-block; max-width: 100%;
+    text-decoration: none; text-align: center;
+    border: 1px solid var(--oro); border-radius: 10px;
+    font-size: 18px; font-weight: 700; color: #fff;
+    transition: all .5s ease-in-out;
+    animation: gradient 10s infinite cubic-bezier(.62, .28, .23, .99) both;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
+}
+.btn:hover { animation: gradient 3s infinite; transform: scale(1.05); }
+.btn:active { transform: scale(0.95); }
+@keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+/* ===== Portada ===== */
+#hero {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; min-height: 85vh; padding: 40px 20px; color: white;
+    background-image: linear-gradient(0deg, rgba(5, 7, 12, .72), rgba(5, 7, 12, .55)), url("Fondo/principal.jpg");
+    background-size: cover; background-position: center;
+}
+#hero h1 { font-size: 3.2em; margin: 0 0 10px; color: var(--hueso); text-shadow: 0 2px 12px rgba(0, 0, 0, .5); }
+#hero p { font-size: 1.25em; margin: 0 0 28px; }
+
+/* ===== Secciones ===== */
+.seccion { padding: 70px 20px; text-align: center; scroll-margin-top: 20px; }
+.seccion h2 { font-size: 2.8em; margin: 0 0 30px; color: var(--carbon); }
+.seccion h2::after { content: ""; display: block; width: 70px; height: 3px; background: var(--oro); margin: 8px auto 0; }
+.seccion.oscuro { background: var(--carbon); color: #e9e6df; }
+.seccion.oscuro h2 { color: #fff; }
+.texto { max-width: 750px; margin: auto; font-size: 1.15em; }
+
+.cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1200px; margin: auto; }
+.card { background: #fff; width: 340px; max-width: 100%; padding: 28px 24px; border-radius: 10px; border-top: 5px solid var(--oro); box-shadow: 0 0 20px rgba(0, 0, 0, .15); text-align: left; transition: transform .3s; }
+.card:hover { transform: translateY(-6px); }
+.card h3 { margin-top: 0; color: var(--carbon); }
+
+/* ===== Contacto, QR y mapa ===== */
+.contacto { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; max-width: 1000px; margin: auto; text-align: left; }
+.datos, .qr, .mapa { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, .15); border-top: 5px solid var(--oro); }
+.datos, .qr { flex: 1 1 280px; }
+.datos p { overflow-wrap: anywhere; }
+.datos h3, .qr h3, .mapa h3 { margin-top: 0; color: var(--carbon); }
+.datos .btn { margin-top: 15px; }
+.qr { text-align: center; }
+#qrcode { display: flex; justify-content: center; margin: 15px 0; }
+
+.mapa { flex: 1 1 100%; }
+.mapa-marco { position: relative; width: 100%; height: 320px; border-radius: 8px; overflow: hidden; background: #e6e3da; }
+.mapa-marco iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+.mapa .btn { margin-top: 15px; }
+
+/* ===== Pie ===== */
+footer { background-color: var(--negro); border-top: 3px solid var(--oro); text-align: center; padding: 40px 20px 15px; color: #cfc8b5; }
+
+/* ===== Tarjetas como enlaces ===== */
+a.card { display: block; color: inherit; text-decoration: none; }
+.card .mas { color: var(--oro-oscuro); font-weight: 700; }
+
+/* ===== Páginas de servicio ===== */
+.titulo-pagina { display: flex; align-items: center; justify-content: center; min-height: 40vh; padding: 30px 20px; text-align: center;
+    background-image: linear-gradient(0deg, rgba(5, 7, 12, .72), rgba(5, 7, 12, .55)), url("Fondo/principal.jpg"); background-size: cover; background-position: center; }
+.titulo-pagina h1 { color: var(--hueso); font-size: 3.2em; margin: 0; text-shadow: 0 2px 12px rgba(0, 0, 0, .5); }
+.detalle { max-width: 800px; margin: auto; padding: 50px 20px; }
+.detalle h2 { color: var(--carbon); font-size: 2.2em; margin: 35px 0 10px; }
+.detalle li { margin-bottom: 8px; }
+.intro { font-size: 1.2em; }
+.aviso { background: #fff; border-left: 5px solid var(--oro); padding: 14px 18px; margin-top: 30px; box-shadow: 0 0 12px rgba(0, 0, 0, .08); }
+.botones { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 30px; }
+
+/* ===== Pantallas medianas y grandes ===== */
+@media (min-width: 720px) {
+    header .container { flex-direction: row; justify-content: space-between; }
+    #hero h1 { font-size: 5em; }
+    .titulo-pagina h1 { font-size: 4.5em; }
+    .mapa-marco { height: 420px; }
+}
+
+/* ===== Celulares ===== */
+@media (max-width: 480px) {
+    .seccion { padding: 50px 16px; }
+    .seccion h2 { font-size: 2.3em; }
+    #hero { min-height: 75vh; }
+    .datos, .qr, .mapa { padding: 22px 18px; }
+    .datos .btn, .mapa .btn, .botones .btn { display: block; width: 100%; }
+    .logo h2 { font-size: 1.1em; }
+    .detalle h2 { font-size: 1.9em; }
+}
